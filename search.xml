@@ -1,9 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>推荐系统学习笔记</title>
+    <url>/2019/12/31/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<p>基于个性化广告推荐系统的需求，学习相关推荐系统知识</p>
+<a id="more"></a>
+<h2 id="1-个性化广告的概念"><a href="#1-个性化广告的概念" class="headerlink" title="1  个性化广告的概念"></a>1  个性化广告的概念</h2><p>​        广告是互联网公司生存的根本，目前，很多广告都是随机投放的，即每次用户来了，随机选择一个广告投放给他。  个性化广告投放目前已经成为了一门独立的学科——计算广告学——但该学科和推荐系统在很多基础理论和方法上是相通的，比如它们的目的都是联系用户和物品，只是在个性化广告中，<strong>物品就是广告</strong>。</p>
+<p>​        广告投放技术分为3类：    </p>
+<ul>
+<li><strong>上下文广告</strong>  通过分析用户正在浏览的网页内容，投放和网页内容相关的广告。代表系统是谷歌的Adsense。</li>
+<li><strong>搜索广告</strong>  通过分析用户在当前会话中的搜索记录，判断用户的搜索目的，投放和用户目的相关的广告。</li>
+<li><strong>个性化展示广告</strong>  我们经常在很多网站看到大量展示广告（就是那些大的横幅图片），它们是根据用户的兴趣，对不同用户投放不同的展示广告。雅虎是这方面研究的代表  </li>
+</ul>
+<h2 id="2-推荐系统的优点和好处"><a href="#2-推荐系统的优点和好处" class="headerlink" title="2  推荐系统的优点和好处"></a>2  推荐系统的优点和好处</h2><p>​        可帮助用户在大信息中找到自己喜欢的内容。如淘宝的猜你喜欢，抖音个性化视频推荐。</p>
+<h2 id="3-推荐系统的术语"><a href="#3-推荐系统的术语" class="headerlink" title="3  推荐系统的术语"></a>3  推荐系统的术语</h2><ul>
+<li>(1) <strong>条目</strong>： 推荐系统实体，淘宝的实体为用户购买的商品，抖音的实体就是视频</li>
+<li>(2) <strong>查询</strong>：推荐系统给出推荐内容的来源，可以是以下三种的组合<ul>
+<li><strong>用户信息</strong>：用户的ID，用户先前与之产生交互的条目</li>
+<li><strong>上下文信息</strong>：一天中的时间，用户的设备</li>
+<li><strong>条目信息</strong>：商品名称，商品类别</li>
+</ul>
+</li>
+<li>(3) <strong>嵌入(Embedding)</strong>: 离散集合(查询集或推荐条目)==&gt;嵌入空间的映射。</li>
+</ul>
+<h2 id="4-推荐系统架构"><a href="#4-推荐系统架构" class="headerlink" title="4 **推荐系统架构"></a>4 **推荐系统架构</h2><p>​        推荐系统体系架构分成三部分: <strong>召回、打分、重排</strong></p>
+<h3 id="4-1-召回-笼统排序"><a href="#4-1-召回-笼统排序" class="headerlink" title="4.1  召回(笼统排序)"></a>4.1  召回(笼统排序)</h3><p>​        即从众多信息中生成候选集合。如抖音从几十亿视频选出一千个。此过程需要快速查询。</p>
+<p>​        方法：给定模型可有多个召回队列，每个队列都筛选不同类型的候选子集。</p>
+<h3 id="4-2-计分-精细排序"><a href="#4-2-计分-精细排序" class="headerlink" title="4.2  计分(精细排序)"></a>4.2  计分(精细排序)</h3><p>​        另一个模型对候选集进行评分和排序，以选择要显示给用户的集合（大约10个）。由于此模型评估的是商品的相对较小子集，因此系统可以依靠其他信息来使用更精确的模型。</p>
+<h3 id="4-3-重排"><a href="#4-3-重排" class="headerlink" title="4.3  重排"></a>4.3  重排</h3><p>​     最后，系统必须考虑最终排名的其他限制。例如，系统删除用户明确不喜欢的项目或提高时效内容的得分。重新排序还可以帮助确保多样性，时效性和公平性。</p>
+<p>本文参考以下内容：</p>
+<p><a href="https://zhuanlan.zhihu.com/p/87578318" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/87578318</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>typora使用手册</title>
     <url>/2019/12/05/typora%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/</url>
-    <content><![CDATA[<h3 id="快捷键："><a href="#快捷键：" class="headerlink" title="快捷键："></a><em>快捷键</em>：</h3><div class="table-container">
+    <content><![CDATA[<p>记录使用Typora编写markdown语法过程中一些实用技巧。</p>
+<a id="more"></a>
+<h2 id="1-快捷键："><a href="#1-快捷键：" class="headerlink" title="1 快捷键："></a>1 快捷键：</h2><div class="table-container">
 <table>
 <thead>
 <tr>
