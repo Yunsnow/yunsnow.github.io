@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>推荐系统学习笔记</title>
-    <url>/2019/12/31/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    <url>/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<p>基于个性化广告推荐系统的需求，学习相关推荐系统知识</p>
 <a id="more"></a>
 <h2 id="1-个性化广告的概念"><a href="#1-个性化广告的概念" class="headerlink" title="1  个性化广告的概念"></a>1  个性化广告的概念</h2><p>​        广告是互联网公司生存的根本，目前，很多广告都是随机投放的，即每次用户来了，随机选择一个广告投放给他。  个性化广告投放目前已经成为了一门独立的学科——计算广告学——但该学科和推荐系统在很多基础理论和方法上是相通的，比如它们的目的都是联系用户和物品，只是在个性化广告中，<strong>物品就是广告</strong>。</p>
@@ -34,7 +34,7 @@
   </entry>
   <entry>
     <title>typora使用手册</title>
-    <url>/2019/12/05/typora%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/</url>
+    <url>/typora%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/</url>
     <content><![CDATA[<p>记录使用Typora编写markdown语法过程中一些实用技巧。</p>
 <a id="more"></a>
 <h2 id="1-快捷键："><a href="#1-快捷键：" class="headerlink" title="1 快捷键："></a>1 快捷键：</h2><div class="table-container">
@@ -115,7 +115,7 @@
   </entry>
   <entry>
     <title>LeetCode相爱相杀</title>
-    <url>/2019/11/30/leetcode/</url>
+    <url>/leetcode/</url>
     <content><![CDATA[<p>与LeetCode的相爱相杀，在解题中找到编程的乐趣，记录解题思路与你共同探讨；</p>
 <a id="more"></a>
 <hr>
@@ -139,7 +139,7 @@
   </entry>
   <entry>
     <title>Hello World</title>
-    <url>/2019/11/30/hello-world/</url>
+    <url>/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
 <a id="more"></a>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span></pre></td></tr></table></figure>
