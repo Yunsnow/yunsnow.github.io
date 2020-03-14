@@ -46,18 +46,18 @@
   };
 </script>
 
-  <meta name="description" content="学习Java、Python、机器学习、LeetCode刷题">
+  <meta name="description" content="Java多线程的实现方式：1 继承Thread类；2 实现Runnable接口 1 Thread类API介绍1&#x2F;&#x2F; 创建2Thread thread &#x3D; New Thread();3Thread thread &#x3D; New Thread(String name);4Thread thread &#x3D; New Thread(Runnable target);5Thread thread &#x3D; New Thr">
 <meta name="keywords" content="Java、Python、Spring、CN">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Untitled">
-<meta property="og:url" content="https:&#x2F;&#x2F;yunsnow.github.io&#x2F;Untitled&#x2F;index.html">
+<meta property="og:title" content="Java多线程">
+<meta property="og:url" content="https:&#x2F;&#x2F;yunsnow.github.io&#x2F;Java%E5%A4%9A%E7%BA%BF%E7%A8%8B&#x2F;index.html">
 <meta property="og:site_name" content="yunsnow">
-<meta property="og:description" content="学习Java、Python、机器学习、LeetCode刷题">
+<meta property="og:description" content="Java多线程的实现方式：1 继承Thread类；2 实现Runnable接口 1 Thread类API介绍1&#x2F;&#x2F; 创建2Thread thread &#x3D; New Thread();3Thread thread &#x3D; New Thread(String name);4Thread thread &#x3D; New Thread(Runnable target);5Thread thread &#x3D; New Thr">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-03-08T12:03:11.594Z">
+<meta property="og:updated_time" content="2020-03-12T04:48:41.644Z">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://yunsnow.github.io/Untitled/">
+<link rel="canonical" href="https://yunsnow.github.io/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
 
 
 <script id="page-configurations">
@@ -71,7 +71,7 @@
   };
 </script>
 
-  <title>Untitled | yunsnow</title>
+  <title>Java多线程 | yunsnow</title>
   
 
 
@@ -215,7 +215,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://yunsnow.github.io/Untitled/">
+    <link itemprop="mainEntityOfPage" href="https://yunsnow.github.io/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -228,7 +228,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Untitled
+          Java多线程
         </h1>
 
         <div class="post-meta">
@@ -237,8 +237,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2020-03-08 20:03:11" itemprop="dateCreated datePublished" datetime="2020-03-08T20:03:11+08:00">2020-03-08</time>
+              <time title="创建时间：2020-03-12 12:46:21 / 修改时间：12:48:41" itemprop="dateCreated datePublished" datetime="2020-03-12T12:46:21+08:00">2020-03-12</time>
             </span>
 
           <br>
@@ -247,7 +248,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>0</span>
+              <span>1.2k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -266,7 +267,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        
+        <p>Java多线程的实现方式：1 继承Thread类；2 实现Runnable接口</p>
+<h3 id="1-Thread类API介绍"><a href="#1-Thread类API介绍" class="headerlink" title="1 Thread类API介绍"></a>1 Thread类API介绍</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">Thread thread = <span class="function">New <span class="title">Thread</span><span class="params">()</span></span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">Thread thread = <span class="function">New <span class="title">Thread</span><span class="params">(String name)</span></span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">Thread thread = <span class="function">New <span class="title">Thread</span><span class="params">(Runnable target)</span></span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">Thread thread = <span class="function">New <span class="title">Thread</span><span class="params">(Runnable target, String name)</span></span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"><span class="comment">// 动态方法</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">thread.isAlive();<span class="comment">// 测试线程是否处于活动状态</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">thread.start();<span class="comment">// 开始执行线程，JVM 调用该线程的 run 方法</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">thread.setName(String name);<span class="comment">// 改变线程名称</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">thread.getName();<span class="comment">// 获取线程名称</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">thread.setPriority(<span class="keyword">int</span> priority);<span class="comment">// 更改线程的优先级</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 具有较高优先级的线程应该在低优先级的线程之前分配处理器时间，然而，线程优先级不能保证线程执行的顺序，而且非常依赖于平台</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line"><span class="comment">   Thread.MIN_PRIORITY    1</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line"><span class="comment">   Thread.NORM_PRIORITY   5(默认)</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line"><span class="comment">   Thread.MAX_PRIORITY    10     */</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">thread.getPriority();<span class="comment">// 获取线程的优先级</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">thread.setDaemon(<span class="keyword">boolean</span> on);<span class="comment">// 将该线程标记为守护线程。守护线程是服务提供者线程，当 JVM 检测到应用程序中的所有线程都只是守护线程时，它将退出应用程序</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">thread.isDaemon();<span class="comment">// 测试是否为守护线程</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">thread.join(<span class="keyword">long</span> millisec);<span class="comment">// 等待该线程终止的时间。假设有两个线程 t1 和 t2，如果线程 t1 调用 t2.join()，线程 t1 开始等待，直到线程 t2 终止，t1 才会继续执行</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">thread.interrupt();<span class="comment">// 尝试中断线程</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line"><span class="comment">// 静态方法</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">Thread.currentThread();<span class="comment">// 返回对当前正在执行的线程对象的引用</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">Thread.yield();<span class="comment">// 尝试暂停当前正在执行的线程对象，并执行其他线程。该线程放弃当前对处理器的使用 </span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">Thread.sleep(<span class="keyword">long</span> millisec);<span class="comment">// 在指定的毫秒数内让当前正在执行的线程休眠（暂停执行）。如果线程在进入休眠之前拥有锁的所有权，则它在休眠期间继续保持这些锁</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">Thread.interrupted();<span class="comment">// 测试线程是否中断</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line">Thread.holdsLock(Object o);<span class="comment">// 返回 boolean 类型，当且仅当当前线程在指定的对象上保持监视器锁时，才返回 true</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">29</span></pre></td><td class="code"><pre><span class="line">Thread.dumpStack();<span class="comment">// 将当前线程的堆栈跟踪打印至标准错误流</span></span></pre></td></tr></table></figure>
+
     </div>
 
     
@@ -290,7 +293,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="/https:/yunsnow.github.io/Untitled/" title="Untitled">https://yunsnow.github.io/Untitled/</a>
+    <a href="/https:/yunsnow.github.io/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/" title="Java多线程">https://yunsnow.github.io/Java多线程/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -307,13 +310,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E7%9A%84%E5%AE%9E%E7%8E%B0/" rel="prev" title="排序算法的实现">
-      <i class="fa fa-chevron-left"></i> 排序算法的实现
+    <a href="/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98%E7%B3%BB%E5%88%97/" rel="prev" title="leetcode每日一题系列">
+      <i class="fa fa-chevron-left"></i> leetcode每日一题系列
     </a></div>
-      <div class="post-nav-item">
-    <a href="/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98%E7%B3%BB%E5%88%97/" rel="next" title="leetcode每日一题系列gg">
-      leetcode每日一题系列gg <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -352,6 +352,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Thread类API介绍"><span class="nav-text">1 Thread类API介绍</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -414,12 +415,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">50k</span>
+    <span title="站点总字数">54k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">46 分钟</span>
+    <span title="站点阅读时长">49 分钟</span>
 </div>
 <div class="powered-by">
 <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
@@ -545,7 +546,7 @@ window.addEventListener('pjax:success', () => {
       repo: 'yunsnow.github.io',
       owner: 'Yunsnow',
       admin: ['Yunsnow'],
-      id: '36a55b1eb6bd6f628706f7dc7b280afb',
+      id: '11769fdab590089b25e19c54d4e6c2a6',
         language: 'zh-CN',
       distractionFreeMode: 'true'
     });
